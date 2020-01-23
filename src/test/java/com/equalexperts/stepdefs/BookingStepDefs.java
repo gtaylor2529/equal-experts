@@ -36,7 +36,7 @@ public class BookingStepDefs {
   @Then("the booking is created successfully")
   public void theBookingIsCreatedSuccessfully() {
     String firstName = (String) this.scenarioContext.get(Keys.FIRST_NAME);
-    assertThat(this.bookingPage.getLatestBooking()).contains(firstName);
+    assertThat(this.bookingPage.getLatestBookingDetails()).contains(firstName);
   }
 
   @Given("a booking exists")
@@ -55,6 +55,6 @@ public class BookingStepDefs {
   @Then("the booking is deleted successfully")
   public void theBookingIsDeletedSuccessfully() {
     String firstName = (String) this.scenarioContext.get(Keys.FIRST_NAME);
-    assertThat(this.bookingPage.getLatestBooking()).doesNotContain(firstName);
+    assertThat(this.bookingPage.getLatestBookingDetails()).doesNotContain(firstName);
   }
 }

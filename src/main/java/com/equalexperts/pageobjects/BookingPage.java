@@ -72,18 +72,17 @@ public class BookingPage extends BasePage {
     this.waitForElementCount(By.className(BookingPage.ROW_LOCATOR), existingRowCount - 1);
   }
 
-  public String getLatestBooking() {
-    List<WebElement> bookingRows =
-        this.bookings.findElements(By.className(BookingPage.ROW_LOCATOR));
-    return bookingRows.get(bookingRows.size() - 1).getText();
+  public String getLatestBookingDetails() {
+    return this.getLatestBooking().getText();
   }
 
   public void deleteLatestBooking() {
+    this.getLatestBooking().findElement(By.cssSelector(BookingPage.BUTTON_LOCATOR)).click();
+  }
+
+  private WebElement getLatestBooking() {
     List<WebElement> bookingRows =
         this.bookings.findElements(By.className(BookingPage.ROW_LOCATOR));
-    bookingRows
-        .get(bookingRows.size() - 1)
-        .findElement(By.cssSelector(BookingPage.BUTTON_LOCATOR))
-        .click();
+    return bookingRows.get(bookingRows.size() - 1);
   }
 }
