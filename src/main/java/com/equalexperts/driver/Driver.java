@@ -11,7 +11,7 @@ public class Driver {
   public static WebDriver newInstance() {
     WebDriverManager.chromedriver().setup();
     WebDriver driver = new ChromeDriver();
-    driver.manage().timeouts().pageLoadTimeout(30, SECONDS);
+    driver.manage().timeouts().pageLoadTimeout(20, SECONDS);
     driver.manage().window().maximize();
     return driver;
   }
