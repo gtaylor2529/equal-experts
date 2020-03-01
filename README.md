@@ -23,3 +23,4 @@ The tests can be executed by running the following command in terminal: ```mvn c
 
 The reports for the tests can be found in the following directory:
 ```target/cucumber-html-reports/overview-features.html```
+
