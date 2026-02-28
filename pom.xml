@@ -17,7 +17,7 @@
         <cucumber.version>5.4.1</cucumber.version>
         <cucumber.reporting.version>5.0.0</cucumber.reporting.version>
         <selenium.version>3.141.59</selenium.version>
-        <assertj.version>3.14.0</assertj.version>
+        <assertj.version>3.27.7</assertj.version>
         <slf4j.version>1.7.30</slf4j.version>
         <webdrivermanager.version>3.8.1</webdrivermanager.version>
     </properties>
